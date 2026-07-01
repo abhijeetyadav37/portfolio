@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+/* Enable Tailwind dark mode using the .dark class */
+@custom-variant dark (&:where(.dark, .dark *));
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Inter, Arial, sans-serif;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}
+
+/* Light Theme */
+body {
+  @apply bg-white text-slate-900;
+}
+
+/* Dark Theme */
+.dark body {
+  @apply bg-slate-950 text-white;
+}
