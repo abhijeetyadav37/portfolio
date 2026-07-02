@@ -1,6 +1,39 @@
 import { motion } from "framer-motion";
+import ProjectCard from "./ProjectCard";
+import passwordChecker from "../assets/projects/password-checker.png";
 
 function Projects() {
+  const projects = [
+    {
+      title: "Password Strength Checker & Generator",
+
+      description:
+        "An Android application that evaluates password strength in real time based on security rules and provides instant feedback to help users create stronger passwords.",
+
+      technologies: [
+        "Java",
+        "Android Studio",
+        "Android SDK",
+        "XML",
+        "Material Design",
+      ],
+
+      learned: [
+        "Android application development",
+        "Java event handling",
+        "Password validation",
+        "Material Design UI",
+        "Input validation",
+      ],
+
+      github: "https://github.com/abhijeetyadav37/StrengthChecker",
+
+      live: "#",
+
+      image: passwordChecker,
+    },
+  ];
+
   return (
     <section
       id="projects"
@@ -30,34 +63,21 @@ function Projects() {
           </p>
         </motion.div>
 
-        {/* Project Placeholder */}
+        {/* Projects */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="mx-auto max-w-4xl rounded-2xl border border-slate-300 bg-white p-10 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-slate-700 dark:bg-slate-950"
+          className="mx-auto max-w-4xl"
         >
-          <div className="flex flex-col items-center text-center">
-
-            {/* Placeholder Image */}
-            <div className="mb-8 flex h-48 w-full items-center justify-center rounded-xl border-2 border-dashed border-slate-300 bg-slate-50 text-6xl dark:border-slate-700 dark:bg-slate-900">
-              🚀
-            </div>
-
-            <h3 className="text-2xl font-bold">
-              Projects Coming Soon
-            </h3>
-
-            <p className="mt-5 max-w-2xl leading-8 text-slate-600 dark:text-slate-400">
-              I am currently working on personal and academic projects to
-              strengthen my software engineering skills. Every completed project
-              will be added here .
-            </p>
-
-            <div className="mt-8 rounded-full bg-cyan-500/10 px-5 py-2 font-medium text-cyan-500">
-              🚧 Building • Learning • Improving
-            </div>
+          <div className="space-y-10">
+            {projects.map((project) => (
+              <ProjectCard
+                key={project.title}
+                {...project}
+              />
+            ))}
           </div>
         </motion.div>
 
