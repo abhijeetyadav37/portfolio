@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import ProjectCard from "../components/ProjectCard";
-import ProjectCard from "../components/ProjectCard";
 import passwordChecker from "../assets/projects/password-checker.png";
 
 function Projects() {
@@ -41,7 +40,6 @@ function Projects() {
       className="bg-slate-100 py-24 text-slate-900 transition-colors duration-300 dark:bg-slate-900 dark:text-white"
     >
       <div className="mx-auto max-w-7xl px-6">
-
         {/* Section Heading */}
         <motion.div
           initial={{ opacity: 0, y: 25 }}
@@ -54,9 +52,7 @@ function Projects() {
             Projects
           </p>
 
-          <h2 className="mt-3 text-4xl font-bold">
-            My Work
-          </h2>
+          <h2 className="mt-3 text-4xl font-bold">My Work</h2>
 
           <p className="mx-auto mt-5 max-w-2xl leading-8 text-slate-600 dark:text-slate-400">
             I believe the best way to learn software development is by building
@@ -74,14 +70,10 @@ function Projects() {
         >
           <div className="space-y-10">
             {projects.map((project) => (
-              <ProjectCard
-                key={project.title}
-                {...project}
-              />
+              <ProjectCard key={project.title} {...project} />
             ))}
           </div>
         </motion.div>
-
       </div>
     </section>
   );
