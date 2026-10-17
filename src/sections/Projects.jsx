@@ -1,6 +1,8 @@
 import { motion } from "framer-motion";
 import ProjectCard from "../components/ProjectCard";
 import passwordChecker from "../assets/projects/password-checker.png";
+import dashboardImage from "../assets/projects/dashboard.png";
+
 
 function Projects() {
   const projects = [
@@ -32,6 +34,38 @@ function Projects() {
 
       image: passwordChecker,
     },
+
+    {
+      title: "CyberSaarthi",
+
+      description:
+        "A cybersecurity case management platform designed to organize security cases, track case information, and visualize relationships between entities. The application includes a dashboard, case management views, and graph-based investigation features.",
+
+      technologies: [
+        "React",
+        "TypeScript",
+        "Python",
+        "PostgreSQL",
+        "Redis",
+        "Neo4j",
+        "Docker",
+      ],
+
+      learned: [
+        "Building a React and TypeScript frontend",
+        "Integrating frontend components with REST APIs",
+        "Managing case data using PostgreSQL",
+        "Working with Redis and Neo4j",
+        "Docker-based development",
+        "Visualizing relationships between entities",
+      ],
+
+      github: "https://github.com/abhijeetyadav37/cybersaarthi",
+
+      live: "https://youtu.be/5etn15xfs5M?si=XIw-FkeWHtT2k-sh",
+
+      image: dashboardImage,
+    },
   ];
 
   return (
@@ -52,7 +86,9 @@ function Projects() {
             Projects
           </p>
 
-          <h2 className="mt-3 text-4xl font-bold">My Work</h2>
+          <h2 className="mt-3 text-4xl font-bold">
+            My Work
+          </h2>
 
           <p className="mx-auto mt-5 max-w-2xl leading-8 text-slate-600 dark:text-slate-400">
             I believe the best way to learn software development is by building
@@ -70,7 +106,10 @@ function Projects() {
         >
           <div className="space-y-10">
             {projects.map((project) => (
-              <ProjectCard key={project.title} {...project} />
+              <ProjectCard
+                key={project.title}
+                {...project}
+              />
             ))}
           </div>
         </motion.div>
