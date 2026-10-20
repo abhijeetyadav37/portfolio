@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import emailjs from "@emailjs/browser";
+import buyMeCoffeeIcon from "../assets/buymeacoffee.png";
 
 import {
   ArrowUpRight,
@@ -413,6 +414,22 @@ function Contact() {
           className="mt-16 flex flex-col items-center justify-between gap-3 border-t border-slate-200 pt-7 text-center text-sm text-slate-500 dark:border-slate-800 dark:text-slate-400 sm:flex-row sm:text-left"
         >
           <p>Thanks for visiting my portfolio.</p>
+
+          <a
+  href="https://buymeacoffee.com/abhijeetyadav"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Buy me a coffee"
+  title="Buy me a coffee"
+  className="inline-flex h-9 w-32 shrink-0 items-center justify-center overflow-hidden rounded-lg transition duration-200 hover:-translate-y-1 hover:scale-105"
+>
+   <img
+    src={buyMeCoffeeIcon}
+    alt=""
+    aria-hidden="true"
+    className="h-full w-full object-contain"
+  />
+</a>
 
           <a
             href="#home"

@@ -1,5 +1,8 @@
+
 import awsLogo from "../assets/projects/aws.png";
 import javaLogo from "../assets/projects/java.png";
+import buyMeCoffeeIcon from "../assets/buymeacoffee.png";
+import profileImage from "../assets/profilee.jpg";
 
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -11,7 +14,6 @@ import {
   Mail,
 } from "lucide-react";
 
-import profileImage from "../assets/profilee.jpg";
 const socialLinks = [
   {
     label: "GitHub",
@@ -31,10 +33,7 @@ const socialLinks = [
 ];
 
 const skills = [
- {
-  name: "Java",
-  logo: javaLogo,
-},
+  { name: "Java", logo: javaLogo },
   {
     name: "Spring Boot",
     logo: "https://cdn.simpleicons.org/springboot/6DB33F",
@@ -55,10 +54,7 @@ const skills = [
     name: "Kafka",
     logo: "https://cdn.simpleicons.org/apachekafka/231F20",
   },
-{
-  name: "AWS",
-  logo: awsLogo,
-},
+  { name: "AWS", logo: awsLogo },
   {
     name: "Docker",
     logo: "https://cdn.simpleicons.org/docker/2496ED",
@@ -123,27 +119,29 @@ function Hero() {
             practical software.
           </p>
 
+          {/* Technology skills */}
           <div className="mt-6 flex flex-wrap gap-2.5">
-  {skills.map(({ name, logo }) => (
-    <div
-      key={name}
-      title={name}
-      className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white/80 px-3 py-2 text-sm font-medium text-slate-700 shadow-sm transition duration-200 hover:-translate-y-1 hover:border-cyan-400 dark:border-slate-800 dark:bg-slate-900/80 dark:text-slate-200"
-    >
-      <img
-        src={logo}
-        alt=""
-        aria-hidden="true"
-        width="20"
-        height="20"
-        loading="lazy"
-        className="h-5 w-5 object-contain"
-      />
-      <span>{name}</span>
-    </div>
-  ))}
-</div>
+            {skills.map(({ name, logo }) => (
+              <div
+                key={name}
+                title={name}
+                className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-white/80 px-3 py-2 text-sm font-medium text-slate-700 shadow-sm transition duration-200 hover:-translate-y-1 hover:border-cyan-400 dark:border-slate-800 dark:bg-slate-900/80 dark:text-slate-200"
+              >
+                <img
+                  src={logo}
+                  alt=""
+                  aria-hidden="true"
+                  width="20"
+                  height="20"
+                  loading="lazy"
+                  className="h-5 w-5 object-contain"
+                />
+                <span>{name}</span>
+              </div>
+            ))}
+          </div>
 
+          {/* Action buttons */}
           <div className="mt-9 flex flex-wrap gap-3">
             <a href="#projects" className="primary-button">
               Explore My Work
@@ -160,6 +158,7 @@ function Hero() {
             </a>
           </div>
 
+          {/* Social links and Buy Me a Coffee */}
           <div className="mt-10 flex flex-wrap items-center gap-4 sm:gap-5">
             <span className="text-xs font-semibold uppercase tracking-[0.15em] text-slate-400">
               Find me on
@@ -179,15 +178,32 @@ function Hero() {
                     ? "noopener noreferrer"
                     : undefined
                 }
-                className="inline-flex items-center gap-2 text-sm font-medium text-slate-600 transition hover:text-cyan-700 dark:text-slate-400 dark:hover:text-cyan-300"
+                className="inline-flex items-center justify-center text-slate-600 transition duration-200 hover:-translate-y-1 hover:text-cyan-700 dark:text-slate-400 dark:hover:text-cyan-300"
               >
-                <Icon size={17} />
-                <span className="hidden sm:inline">{label}</span>
+                <Icon size={19} />
               </a>
             ))}
+
+            {/* Buy Me a Coffee — rectangular icon only */}
+            <a
+              href="https://buymeacoffee.com/abhijeetyadav"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Buy Me a Coffee"
+              title="Buy Me a Coffee"
+              className="inline-flex h-9 w-24 shrink-0 items-center justify-center overflow-hidden rounded-lg transition duration-200 hover:-translate-y-1 hover:scale-105 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-cyan-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-950"
+            >
+              <img
+                src={buyMeCoffeeIcon}
+                alt=""
+                aria-hidden="true"
+                className="h-full w-full object-contain"
+              />
+            </a>
           </div>
         </motion.div>
 
+        {/* Profile image */}
         <motion.div
           initial={{ opacity: 0, scale: 0.94, x: 15 }}
           animate={{ opacity: 1, scale: 1, x: 0 }}
@@ -212,9 +228,11 @@ function Hero() {
                   <p className="text-xs font-medium uppercase tracking-[0.2em] text-cyan-200">
                     Developer Portfolio
                   </p>
+
                   <p className="mt-2 text-xl font-bold sm:text-2xl">
                     Abhijeet Yadav
                   </p>
+
                   <p className="mt-1 text-sm text-slate-200">
                     Java · Spring Boot · React
                   </p>
@@ -239,6 +257,7 @@ function Hero() {
                 <p className="text-xs text-slate-500 dark:text-slate-400">
                   Focus
                 </p>
+
                 <p className="mt-0.5 text-sm font-bold">
                   Backend Engineering
                 </p>
