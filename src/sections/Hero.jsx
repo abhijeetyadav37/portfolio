@@ -3,6 +3,7 @@ import awsLogo from "../assets/projects/aws.png";
 import javaLogo from "../assets/projects/java.png";
 import buyMeCoffeeIcon from "../assets/buymeacoffee.png";
 import profileImage from "../assets/profilee.jpg";
+import goLangImage from "../assets/go.png";
 
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -42,6 +43,9 @@ const skills = [
     name: "React",
     logo: "https://cdn.simpleicons.org/react/61DAFB",
   },
+
+   { name: "GO", logo: goLangImage },
+
   {
     name: "PostgreSQL",
     logo: "https://cdn.simpleicons.org/postgresql/4169E1",

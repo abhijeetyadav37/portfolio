@@ -1,23 +1,32 @@
 import awsLogo from "../assets/projects/aws.png";
 import javaLogo from "../assets/projects/java.png";
 import { motion } from "framer-motion";
+import goLangImage from "../assets/go.png";
 
 const skillList = [
  {
   name: "Java",
   logo: javaLogo,
 },
-  {
-    name: "JavaScript",
-    logo: "https://cdn.simpleicons.org/javascript/F7DF1E",
-  },
+  
   {
     name: "Spring Boot",
     logo: "https://cdn.simpleicons.org/springboot/6DB33F",
   },
+
+   {
+  name: "GO",
+  logo: goLangImage,
+},
   {
     name: "React",
     logo: "https://cdn.simpleicons.org/react/61DAFB",
+  },
+
+
+  {
+    name: "JavaScript",
+    logo: "https://cdn.simpleicons.org/javascript/F7DF1E",
   },
   {
     name: "HTML5",
