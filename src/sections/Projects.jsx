@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import ProjectCard from "../components/ProjectCard";
 import passwordChecker from "../assets/projects/password-checker.png";
 import dashboardImage from "../assets/projects/dashboard.png";
-
+import kahaniAddaImage from "../assets/kahani-adda.png";
 
 function Projects() {
   const projects = [
@@ -35,6 +35,7 @@ function Projects() {
       image: passwordChecker,
     },
 
+
     {
       title: "CyberSaarthi",
 
@@ -66,6 +67,38 @@ function Projects() {
 
       image: dashboardImage,
     },
+
+{
+  title: "Kahani Adda",
+  description:
+    "A full-stack story publishing platform where readers can explore stories across genres, search and filter content, and discover new writers. Includes story submissions, an admin dashboard, content management, and a live deployment with PostgreSQL database integration.",
+  technologies: [
+    "Python",
+    "Flask",
+    "Jinja2",
+    "HTML5",
+    "CSS3",
+    "JavaScript",
+    "PostgreSQL",
+    "Neon",
+    "Render"
+  ],
+  learned: [
+    "Building full-stack web applications using Flask and Jinja2",
+    "Database integration and persistent data using PostgreSQL",
+    "Implementing search, genre filters, and story publishing workflows",
+    "Building administrator authentication and content management",
+    "Deploying a Python web application on Render",
+    "Managing production configuration and environment variables"
+  ],
+  github: "https://github.com/abhijeetyadav37/kahaniAdda",
+  live: "https://kahaniadda.onrender.com",
+  image: kahaniAddaImage
+}
+
+
+
+
   ];
 
   return (
