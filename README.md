@@ -52,6 +52,7 @@ Displays technologies I work with, including:
 * JavaScript
 * React
 * Spring Boot
+* Go
 * HTML
 * CSS
 * Tailwind CSS
@@ -297,6 +298,7 @@ Interested in:
 
 * Java
 * Backend Development
+* GO
 * Data Structures & Algorithms
 * Linux
 * React
