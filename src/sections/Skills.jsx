@@ -13,7 +13,6 @@ const skillList = [
     name: "Spring Boot",
     logo: "https://cdn.simpleicons.org/springboot/6DB33F",
   },
-
    {
   name: "GO",
   logo: goLangImage,
