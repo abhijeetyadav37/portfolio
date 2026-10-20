@@ -1,7 +1,7 @@
 import awsLogo from "../assets/projects/aws.png";
 import javaLogo from "../assets/projects/java.png";
 import { motion } from "framer-motion";
-import goLangImage from "../assets/go.png";
+import goLangImage from "../assets/Go.png";
 
 const skillList = [
  {

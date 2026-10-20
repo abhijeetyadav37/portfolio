@@ -3,7 +3,7 @@ import awsLogo from "../assets/projects/aws.png";
 import javaLogo from "../assets/projects/java.png";
 import buyMeCoffeeIcon from "../assets/buymeacoffee.png";
 import profileImage from "../assets/profilee.jpg";
-import goLangImage from "../assets/go.png";
+import goLangImage from "../assets/Go.png";
 
 import { FaGithub, FaLinkedinIn } from "react-icons/fa";
 import { motion } from "framer-motion";
